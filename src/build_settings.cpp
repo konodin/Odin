@@ -2338,7 +2338,7 @@ gb_internal bool init_build_paths(String init_filename) {
 		} else {
 			// Init filename was not 'current path'.
 			// Contruct the output name from the path elements as usual.
-			String output_name = init_filename;
+			String output_name = bc->build_paths[BuildPath_Main_Package].basename;
 			// If it ends with a trailing (back)slash, strip it before continuing.
 			while (output_name.len > 0 && (output_name[output_name.len-1] == '/' || output_name[output_name.len-1] == '\\')) {
 				output_name.len -= 1;
